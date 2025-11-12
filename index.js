@@ -15,13 +15,16 @@ function getWinner(humanChoice, computerChoice){
 	computerChoice = computerChoice.toLocaleLowerCase();
 	console.log(humanChoice, computerChoice);
 	if (humanChoice == computerChoice){
+		divStatus.textContent = "Draw";
 		return (0);
 	}
 	if ((humanChoice == 'rock' && computerChoice == 'scissors')
 		|| (humanChoice == 'paper' && computerChoice == 'rock')
 		|| (humanChoice == 'scissors' && computerChoice == 'paper')) {
+			divStatus.textContent = "You win this round! " + humanChoice + " beats " + computerChoice;
 			return (1);
 	}else {
+		divStatus.textContent = "You lose this round! " + computerChoice + " beats " + humanChoice;
 		return (2);
 	}
 }
@@ -47,10 +50,18 @@ function playRound(target) {
 	else if (winner == 2)
 		computerPoint++;
 	updatePoints();
-	if (playerPoint == 5)
+	if (playerPoint == 5){
 		divStatus.innerHTML = "<span class='green'>You win</span>";
-	else if (computerPoint == 5)
+		alert('You win');
+	}
+	else if (computerPoint == 5){
 		divStatus.innerHTML = "<span class='red'>You lose</span>";
+		alert('You lose');
+	}
+	if (playerPoint == 5 || computerPoint == 5) {
+		playerPoint = 0;
+		computerPoint = 0;
+	}
 }
 
 for(const b of btns) {
