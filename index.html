@@ -7,12 +7,31 @@
 	<title>Rock | Paper | Scissors</title>
 </head>
 <body>
+	<div class="header">
+		<h1 id="title">Rock, Paper, Scissors</h1>
+	</div>
 	<div class="container">
-		<h1 id="title">Rock | Paper | Scissors</h1>
-		<div class="buttons">
-			<button id="btn-rock">Rock</button>
-			<button id="btn-paper">Paper</button>
-			<button id="btn-scissors">Scissors</button>
+		<div class="points-container">
+			<h2>Points</h2>
+			<div class="points">
+				<div class="player">
+					Player: <span id="ppoint">0</span>
+				</div>
+				<div class="computer">
+					Computer: <span id="idcpoint">0</span>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<span>Click on your choice</span>
+			<div class="buttons">
+				<button id="btn-rock">Rock</button>
+				<button id="btn-paper">Paper</button>
+				<button id="btn-scissors">Scissors</button>
+			</div>
+		</div>
+		<div class="status">
+			You win
 		</div>
 	</div>
 	<script src="index.js"></script>
