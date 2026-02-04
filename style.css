@@ -62,3 +62,34 @@ body {
 	width: 32px;
 	height: 32px;
 }
+
+.card-item:not(#game-controls) button {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.card-game button:hover {
+	transform: scale(1.1);
+	transition: transform 0.2s;
+}
+
+.card-game button:active {
+	transform: scale(0.9);
+	transition: transform 0.1s;
+}
+
+.card-game button img {
+	height: 64px;
+}
+
+.choices-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+}
+
