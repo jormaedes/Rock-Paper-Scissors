@@ -28,14 +28,20 @@ body {
 .container {
 	flex: 1;
 	background: var(--bg-color);
-	padding: 16px;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 16px;
 }
 
+.card-game {
+	background: #333333;
+	padding: 24px;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	min-width: 300px;
+}
 
 .points-container {
 	display: flex;
