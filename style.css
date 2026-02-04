@@ -161,9 +161,6 @@ dialog {
 	border: none;
 	border-radius: 16px;
 	padding: 16px;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
 	background: var(--bg-card-color);
 	color: white;
 	margin: auto;
@@ -197,6 +194,7 @@ dialog::backdrop {
 }
 
 #close-dialog-button {
+	margin-top: 16px;
 	padding: 8px 16px;
 	border: none;
 	border-radius: 8px;
@@ -205,6 +203,7 @@ dialog::backdrop {
 	font-size: 16px;
 	font-weight: bold;
 	cursor: pointer;
+	width: 100%;
 }
 
 #close-dialog-button:hover {
