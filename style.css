@@ -1,3 +1,10 @@
+:root {
+	--bg-color: #26006e;
+	--scissors-color: #0c7ceb;
+	--paper-color: #00dfba;
+	--rock-color: #fe2bf1;
+}
+
 * {
 	margin: 0;
 	padding: 0;
