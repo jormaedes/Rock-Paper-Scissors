@@ -88,6 +88,13 @@ body {
 
 .card-game button img {
 	height: 64px;
+	filter: saturate(0);
+}
+
+.card-game button img:hover,
+.card-game button img.selected {
+	filter: saturate(1);
+	transition: filter 0.3s;
 }
 
 .choices-container {
@@ -104,4 +111,32 @@ body {
 #result-message {
 	text-align: center;
 	font-size: 20px;
+}
+
+#game-controls {
+	margin-top: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+}
+
+#game-controls button {
+	flex: 1;
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#play-button {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#reset-button {
+	background-color: #f44336;
+	color: white;
 }
