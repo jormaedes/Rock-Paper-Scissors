@@ -46,50 +46,19 @@ body {
 
 .points-container {
 	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	text-align: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.points {
-	display: flex;
-	gap: 16px;
-}
-
-.content {
+.points-container > div {
 	display: flex;
 	flex-direction: column;
-	background: #222222;
-	padding: 12px;
-	gap: 8px;
-	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
 }
 
-.buttons {
-	display: flex;
-	gap: 12px;
-}
-
-.buttons button {
-	border: 0;
-	padding: 8px 16px;
-	border-radius: 8px;
-	cursor: pointer;
-}
-
-.buttons button:hover {
-	background: #645f5f;
-	color: white;
-}
-
-.content span {
-	color: white;
-}
-
-.red {
-	color: red;
-}
-
-.green{
-	color: green;
+.points-container img {
+	width: 32px;
+	height: 32px;
 }
