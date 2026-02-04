@@ -63,6 +63,10 @@ body {
 	height: 32px;
 }
 
+.card-item {
+	color: white;
+}
+
 .card-item:not(#game-controls) button {
 	border: none;
 	background: transparent;
@@ -93,3 +97,11 @@ body {
 	gap: 16px;
 }
 
+.result-container {
+	margin-top: 16px;
+}
+
+#result-message {
+	text-align: center;
+	font-size: 20px;
+}
