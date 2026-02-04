@@ -22,12 +22,12 @@ body {
 	text-align: center;
 	background: #222222;
 	color: white;
-	padding: 8px;
+	padding: 20px;
 }
 
 .container {
-	flex-grow: 1;
-	background: #dedede;
+	flex: 1;
+	background: var(--bg-color);
 	padding: 16px;
 	display: flex;
 	flex-direction: column;
