@@ -3,6 +3,7 @@
 	--scissors-color: #0c7ceb;
 	--paper-color: #00dfba;
 	--rock-color: #fe2bf1;
+	--bg-card-color: #333333;
 }
 
 * {
@@ -20,9 +21,9 @@ body {
 
 .header {
 	text-align: center;
-	background: #222222;
 	color: white;
 	padding: 20px;
+	background: var(--bg-card-color);
 }
 
 .container {
@@ -34,7 +35,7 @@ body {
 }
 
 .card-game {
-	background: #333333;
+	background: var(--bg-card-color);
 	padding: 24px;
 	border-radius: 16px;
 	display: flex;
