@@ -4,6 +4,12 @@ const playerPoints = document.getElementById('player-score');
 const computerPoints = document.getElementById('computer-score');
 const choicesButtons =[...document.querySelectorAll('.choices-container button')];
 const dialog = document.querySelector('dialog');
+const closeDialogButton = document.getElementById('close-dialog-button');
+
+closeDialogButton.addEventListener('click', () => {
+	choicesButtons.forEach(btn => btn.firstElementChild.classList.remove('selected'));
+	dialog.close();
+});
 
 function getComputerChoice() {
 	const choices = ['rock', 'paper', 'scissors'];
