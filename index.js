@@ -30,13 +30,27 @@ btnPlay.addEventListener('click', () => {
 		return;
 	}
 	const computerChoice = getComputerChoice();
-	const computerChoiceImg = document.getElementById(computerChoice);
-	const result = document.getElementById('dialog-result-message');
+	const computerChoiceImg = document.getElementById('computer-choice-img');
+	const resultMessage = document.getElementById('dialog-result-message');
+	const winner = checkWinner(playerChoice.id, computerChoice);
+	const conputerChoiceText = document.getElementById('computer-choice-text');
+	const playerChoiceText = document.getElementById('player-choice-text');
+	const playerChoiceImg = document.getElementById('player-choice-img');
 	
-
-
+	computerChoiceImg.alt = computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
+	computerChoiceImg.src = `img/${computerChoice}.webp`;
+	conputerChoiceText.textContent = `Computer choise: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
+	playerChoiceImg.src = `img/${playerChoice.id}.webp`;
+	playerChoiceImg.alt = playerChoice.id.charAt(0).toUpperCase() + playerChoice.id.slice(1);
+	playerChoiceText.textContent = `You chose: ${playerChoice.id.charAt(0).toUpperCase() + playerChoice.id.slice(1)}`;
+	if (winner === 'tie') {
+		resultMessage.textContent = "It's a tie!";
+	} else if (winner === 'player') {
+		resultMessage.textContent = 'You win!';
+	} else {
+		resultMessage.textContent = 'Computer wins!';
+	}
 	dialog.showModal();
-	// Game logic here
 });
 
 function checkWinner(player, computer) {
