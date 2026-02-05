@@ -29,6 +29,28 @@ btnPlay.addEventListener('click', () => {
 	if (!playerChoice) {
 		return;
 	}
+	const computerChoice = getComputerChoice();
+	const computerChoiceImg = document.getElementById(computerChoice);
+	const result = document.getElementById('dialog-result-message');
+	
+
+
 	dialog.showModal();
 	// Game logic here
 });
+
+function checkWinner(player, computer) {
+	if (player === computer) {
+		return 'tie';
+	}
+	if (
+		(player === 'rock' && computer === 'scissors') ||
+		(player === 'paper' && computer === 'rock') ||
+		(player === 'scissors' && computer === 'paper')
+	) {
+		playerPoints.textContent = String(Number(playerPoints.textContent) + 1);
+		return 'player';
+	}
+	computerPoints.textContent = String(Number(computerPoints.textContent) + 1);
+	return 'computer';
+}
