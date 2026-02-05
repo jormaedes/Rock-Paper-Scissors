@@ -18,6 +18,12 @@ choicesButtons.forEach(button => {
 	});
 });
 
+btnReset.addEventListener('click', () => {
+	playerPoints.textContent = '0';
+	computerPoints.textContent = '0';
+	choicesButtons.forEach(btn => btn.firstElementChild.classList.remove('selected'));
+});
+
 btnPlay.addEventListener('click', () => {
 	const playerChoice = document.querySelector('.choices-container button img.selected');
 	if (!playerChoice) {
