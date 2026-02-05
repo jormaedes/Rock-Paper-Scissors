@@ -1,9 +1,8 @@
 :root {
-	--bg-color: #26006e;
-	--scissors-color: #0c7ceb;
-	--paper-color: #00dfba;
-	--rock-color: #fe2bf1;
-	--bg-card-color: #333333;
+	--bg-color: #0F172A;
+	--bg-card-color: #1E293B;
+	--play-button-color: #22C55E;
+	--reset-button-color: #EF4444;
 }
 
 * {
@@ -21,7 +20,7 @@ body {
 
 .header {
 	text-align: center;
-	color: white;
+	color: #F8FAFC;
 	padding: 20px;
 	background: var(--bg-card-color);
 }
@@ -64,14 +63,14 @@ body {
 }
 
 .card-item {
-	color: white;
+	color: #CBD5E1;
 }
 
 .card-item:not(#game-controls) button {
 	border: none;
 	background: transparent;
 	cursor: pointer;
-	color: white;
+	color: #CBD5E1;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -132,13 +131,13 @@ body {
 }
 
 #play-button {
-	background-color: #4CAF50;
-	color: white;
+	background-color: var(--play-button-color);
+	color: #F8FAFC;
 }
 
 #reset-button {
-	background-color: #f44336;
-	color: white;
+	background-color: var(--reset-button-color);
+	color: #F8FAFC;
 }
 
 footer {
@@ -149,7 +148,7 @@ footer {
 }
 
 footer a {
-	color: #4CAF50;
+	color: var(--play-button-color);
 	text-decoration: none;
 }
 
@@ -162,12 +161,12 @@ dialog {
 	border-radius: 16px;
 	padding: 16px;
 	background: var(--bg-card-color);
-	color: white;
+	color: #94A3B8;
 	margin: auto;
 }
 
 dialog::backdrop {
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .result {
@@ -198,7 +197,7 @@ dialog::backdrop {
 	padding: 8px 16px;
 	border: none;
 	border-radius: 8px;
-	background-color: #4CAF50;
+	background-color: var(--play-button-color);
 	color: white;
 	font-size: 16px;
 	font-weight: bold;
