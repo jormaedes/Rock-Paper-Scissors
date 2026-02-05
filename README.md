@@ -53,7 +53,8 @@ This project revisits the original console-based version and upgrades it to a fu
 
 ```text
 rock-paper-scissors/
-├── index.html
+├── img/
+├──	index.html
 ├── style.css
 ├── index.js
 └── README.md
